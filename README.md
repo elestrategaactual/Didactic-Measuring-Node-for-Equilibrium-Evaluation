@@ -14,6 +14,7 @@ The Didactic Equilibrium Evaluation Node is an Arduino-based project designed fo
 - **Easy Setup:** Simple and straightforward setup process for quick deployment.
 - **Educational Use:** Ideal for educational settings, practical demonstrations, and learning about motion sensing technologies and for its main goal to use as a tool for therapist for the support of therapy sessions.
 - **Case Model Avalible:**
+  [Details](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/wiki/CASE-3D-Desing)
 ![](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/blob/main/Documents/Case%20Drawings/assembly.gif)
 ## Getting Started
 
