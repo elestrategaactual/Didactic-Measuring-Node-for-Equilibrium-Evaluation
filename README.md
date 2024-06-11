@@ -9,10 +9,10 @@ The Didactic Equilibrium Evaluation Node is an Arduino-based project designed fo
 
 ## Features
 
-- **Real-time Motion Sensing:** Utilizes an IMU sensor to capture motion data in real-time.
+- **Real-time Motion Sensing:** Utilizes the BMI270 IMU sensor and BMI150 magnetometer to capture motion data in real-time.
 - **Bluetooth Low Energy (BLE) Connectivity:** Enables wireless data transmission to external devices.
 - **Easy Setup:** Simple and straightforward setup process for quick deployment.
-- **Educational Use:** Ideal for educational settings, practical demonstrations, and learning about motion sensing technologies.
+- **Educational Use:** Ideal for educational settings, practical demonstrations, and learning about motion sensing technologies and for its main goal to use as a tool for therapist for the support of therapy sessions.
 
 ## Getting Started
 
@@ -22,18 +22,49 @@ The Didactic Equilibrium Evaluation Node is an Arduino-based project designed fo
    ```
 
 2. **Setup Arduino Environment:**
-   - Install the necessary Arduino IDE and libraries.
-   - Connect the Arduino board to your computer.
-
+   - Install the necessary Arduino IDE or platform IO and add the libraries libraries.(this code is build in platformIO to use it with arduino ide yu should make some minimal changes)
+   - Connect the Arduino board BLE33 rev2 or Ble33 sense rev2 to your computer.(other manunfacturers board may work with suitable change of the provided Code)
+   - Install the drivers for the arduino mbed devices and the mbed library.
+     
 3. **Upload Code:**
-   - Open the Arduino sketch (`.ino`) file in the Arduino IDE.
-   - Upload the code to your Arduino board.
-
-4. **Connect IMU Sensor:**
-   - Connect the IMU sensor to the appropriate pins on the Arduino board.
-
-5. **Start Data Transmission:**
+   - Open the platformIO project (`main.cpp`).
+   - Select the port and upload the code to your Arduino board.
+     
+4. **Start Data Transmission:**
    - Follow the documentation to connect to the BLE device and begin receiving motion data.
+     
+## Bluetooth Services and Characteristics
+
+| Service UUID                       | Characteristic UUID                 | Data Format                     | Description                                     |
+|------------------------------------|-------------------------------------|---------------------------------|-------------------------------------------------|
+| `478a9671-f67b-4194-b7b0-5a65cd5f98b0` | `35d2c079-4efd-4b4b-accb-658675aad26e` | Command (Read/Write)           | Control commands for the device.                |
+| `478a9671-f67b-4194-b7b0-5a65cd5f98b0` | `430A5B62-C01A-4DB5-8347-0565C672C459` | Motion Data (Float Array[9])   | Motion data transmitted from the device.        |
+
+### Command Service
+
+- **Service UUID:** `478a9671-f67b-4194-b7b0-5a65cd5f98b0`
+
+### Command Characteristic
+
+- **Characteristic UUID:** `35d2c079-4efd-4b4b-accb-658675aad26e`
+- **Properties:** Read, Write
+- **Data Type:** Byte
+- **Description:** Control commands for the device.
+
+### Motion Data Service
+
+- **Service UUID:** `478a9671-f67b-4194-b7b0-5a65cd5f98b0`
+
+### Motion Data Characteristic
+
+- **Characteristic UUID:** `430A5B62-C01A-4DB5-8347-0565C672C459`
+- **Properties:** Read, Notify
+- **Data Format:** Float Array[9]
+  - Index 0-2: Euler Angles (Roll, Yaw, Pitch) in degrees (°).
+  - Index 3-5: Acceleration (X, Y, Z) in meters per second squared (m/s²).
+  - Index 6-8: Angular Acceleration (X, Y, Z) in degrees per second (°/s).
+- **Description:** Motion data transmitted from the device.
+
 
 ## License
 
