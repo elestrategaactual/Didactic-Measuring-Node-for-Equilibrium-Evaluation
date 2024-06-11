@@ -22,7 +22,7 @@ The Didactic Equilibrium Evaluation Node is an Arduino-based project designed fo
    ```
 
 2. **Setup Arduino Environment:**
-   - Install the necessary Arduino IDE or platform IO and add the libraries libraries.(this code is build in [platformIO](https://docs.platformio.org/en/latest/what-is-platformio.html) to use it with arduino ide yu should make some minimal changes)
+   - Install the necessary Arduino IDE or platform IO and add the libraries libraries.(this code is build in [platformIO](https://docs.platformio.org/en/latest/what-is-platformio.html) to use it with arduino ide you should make some minimal changes)
      
    - Connect the Arduino board BLE33 rev2 or Ble33 sense rev2 to your computer.(other manunfacturers board may work with suitable change of the provided Code)
    - Install the drivers for the arduino mbed devices and the mbed library.
