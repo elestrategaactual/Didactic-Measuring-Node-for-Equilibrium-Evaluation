@@ -16,6 +16,9 @@ The Didactic Equilibrium Evaluation Node is an Arduino-based project designed fo
 - **Case Model Avalible:**
   [Details](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/wiki/CASE-3D-Desing)
 ![](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/blob/main/Documents/Case%20Drawings/assembly.gif)
+- **PCB Desing:**
+    [Details](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/wiki/PCB-Design)
+ ![] (https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/blob/main/Documents/PCB/PCB_3d_model.png)
 ## Getting Started
 
 1. **Clone the Repository:**
