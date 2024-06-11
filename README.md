@@ -77,5 +77,9 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgments
 
 - Inspiration: []
-- Libraries: []
+- Libraries:
+  [Madwick filter implementation](https://github.com/xioTechnologies/Fusion)
+  [Arduino IMU Library](https://github.com/arduino-libraries/Arduino_BMI270_BMM150)
+  [Arduino BLE Library](https://github.com/arduino-libraries/ArduinoBLE)
+  [IMU API]((https://github.com/boschsensortec/BMI270_SensorAPI))
 
