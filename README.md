@@ -27,7 +27,7 @@ The Didactic Equilibrium Evaluation Node is an Arduino-based project designed fo
    - Install the drivers for the arduino mbed devices and the mbed library.
      
 3. **Upload Code:**
-   - Open the platformIO project (`main.cpp`).
+   - Open the platformIO project (`src\main.cpp`).
    - Select the port and upload the code to your Arduino board.
      
 4. **Start Data Transmission:**
