@@ -2,7 +2,7 @@
 # Didactic Equilibrium Evaluation Node
 
 ![Equilibrium Evaluation](equilibrium_evaluation.jpg)
-
+https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/blob/main/Documents/Case%20Drawings/assembly.mp4
 ## Description
 
 The Didactic Equilibrium Evaluation Node is an Arduino-based project designed for educational purposes to evaluate balance and motion. It incorporates an Inertial Measurement Unit (IMU) sensor for motion sensing and utilizes Bluetooth Low Energy (BLE) for wireless data transmission.
