@@ -1,7 +1,7 @@
 
 # Didactic Equilibrium Evaluation Node
 
-![Equilibrium Evaluation]([equilibrium_evaluation.jpg](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/blob/main/Documents/Diagrams/equilibrium_evaluation.jpg))
+![equilibrium_evaluation.jpg](https://github.com/elestrategaactual/Didactic-Measuring-Node-for-Equilibrium-Evaluation/blob/main/Documents/Diagrams/equilibrium_evaluation.jpg)
 
 ## Description
 
