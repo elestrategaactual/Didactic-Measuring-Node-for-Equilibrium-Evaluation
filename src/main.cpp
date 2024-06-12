@@ -8,7 +8,7 @@
 #include <mbed_events.h>
 
 // debug serial define to 1 if you are debugging if not set as 0
-#define DEBUG 1
+#define DEBUG 0
 
 #if DEBUG == 1
 #define debugpln(x) Serial.println(x)
@@ -469,20 +469,19 @@ void updatemeasurements()
   meaData[1] = angles[1];
   meaData[2] = angles[2];
   meaData[3] = earth.axis.x;
-  ;
   meaData[4] = earth.axis.y;
   meaData[5] = earth.axis.z;
   meaData[6] = gxyz[0];
   meaData[7] = gxyz[1];
   meaData[8] = gxyz[2];
 
-  debugfp(euler.angle.roll, 2);
+  debugfp( meaData[3], 2);
   debugp("  ");
-  debugfp(euler.angle.pitch, 2);
+  debugfp( meaData[4], 2);
   debugp("  ");
-  debugfpln(euler.angle.yaw, 2);
+  debugfpln( meaData[5], 2);
 
-  motionMea.writeValue(angles, sizeof(meaData));
+  motionMea.writeValue(meaData, sizeof(meaData));
 
   rtos::ThisThread::yield();
 }
@@ -593,7 +592,7 @@ void initializeDataSending()
     // Start the thread and associate it with the event queue
     sendData.start(callback(&eventUpdateData, &events::EventQueue::dispatch_forever));
     // Program to send data every 100ms
-    eventUpdateData.call_every(20ms, &updatemeasurements);
+    eventUpdateData.call_every(100ms, &updatemeasurements);
   }
 }
 void commandHandler(){
